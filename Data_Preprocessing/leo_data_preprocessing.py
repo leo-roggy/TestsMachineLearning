@@ -35,11 +35,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 
 # Feature Scaling
 sc = StandardScaler()
-
-#sc.fit(X_train)
-#X_train = sc.transform(X_train)
-#X_test = sc.transform(X_test)
-
 sc.fit(X_train[:, 3:5])
 X_train[:, 3:5] = sc.transform(X_train[:, 3:5])
 X_test[:, 3:5] = sc.transform(X_test[:, 3:5])
