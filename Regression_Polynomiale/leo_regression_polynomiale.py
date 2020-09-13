@@ -15,7 +15,6 @@ dataset = pd.read_csv('Position_Salaries.csv')
 X = dataset.iloc[:, 1:2].values
 y = dataset.iloc[:, -1].values
 
-#X_test = np.array([[0], [3.5], [6.5], [7.5], [9.5]])
 X_test = np.arange(0, 10.1, 0.05).reshape(-1, 1)
 
 # Diviser le dataset entre le Training set et le Test set
